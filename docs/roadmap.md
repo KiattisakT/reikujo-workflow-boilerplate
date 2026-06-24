@@ -67,6 +67,8 @@ Create these only after v1 is stable.
 
 ### reikujo-frontend-vite
 
+Status: first variant started in this repo as `frontend-vite`.
+
 For React/Vite frontend projects.
 
 Possible defaults:

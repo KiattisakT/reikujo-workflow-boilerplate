@@ -7,6 +7,7 @@ Use this checklist when creating a new project from Reikujo.
 - [ ] Copy the boilerplate without local runtime state.
 - [ ] Run `./scripts/init-project.sh "Project Name"`.
 - [ ] Confirm `reikujo.json` has the right project name, variant, and package manager.
+- [ ] If using `frontend-vite`, read `docs/variants/frontend-vite.md` and decide whether to run `./scripts/scaffold-frontend-vite.sh app`.
 - [ ] Decide whether to initialize git now or after first project-specific edits.
 
 ## 2. Fill project context

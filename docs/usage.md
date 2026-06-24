@@ -111,3 +111,18 @@ Examples:
 - `reikujo-next-app` — Next.js app baseline.
 - `reikujo-docs-only` — documentation/research project baseline.
 - `reikujo-agent-workspace` — agent-heavy workspace with stronger `.agent-state` conventions.
+
+## Included variants
+
+### frontend-vite
+
+```bash
+./scripts/init-project.sh "My Frontend App" --variant frontend-vite --package-manager pnpm --git
+./scripts/scaffold-frontend-vite.sh app
+```
+
+Read:
+
+- `docs/variants/frontend-vite.md`
+- `variants/frontend-vite/README.md`
+- `variants/frontend-vite/AGENTS.addon.md`

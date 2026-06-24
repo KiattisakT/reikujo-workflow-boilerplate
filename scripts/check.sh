@@ -41,6 +41,18 @@ required = [
 ]
 if any(value in (None, '') for value in required):
     raise SystemExit('Invalid reikujo.json: missing required manifest fields')
+
+for manifest_path in sorted(Path('variants').glob('*/reikujo.variant.json')):
+    variant = json.loads(manifest_path.read_text())
+    required_variant = [
+        variant.get('schemaVersion'),
+        variant.get('name'),
+        variant.get('workflowVersion'),
+        variant.get('description'),
+    ]
+    if any(value in (None, '') for value in required_variant):
+        raise SystemExit(f'Invalid variant manifest: {manifest_path}')
 PY
 
 echo "✓ reikujo manifest is valid"
+echo "✓ variant manifests are valid"

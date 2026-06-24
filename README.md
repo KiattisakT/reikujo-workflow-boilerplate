@@ -50,11 +50,16 @@ Later variants can extend it:
 - `reikujo-fullstack-app`
 - `reikujo-agent-workspace`
 
+Current included variant:
+
+- `frontend-vite` — see `docs/variants/frontend-vite.md` and `variants/frontend-vite/`
+
 ## Core commands
 
 ```bash
 ./scripts/check.sh
 ./scripts/init-project.sh "My Project" --package-manager pnpm
+./scripts/scaffold-frontend-vite.sh app
 ./scripts/handoff.sh
 ```
 

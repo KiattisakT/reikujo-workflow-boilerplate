@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "name": "frontend-vite",
+  "workflowVersion": "0.1.0",
+  "description": "React/Vite frontend workflow variant for Reikujo projects.",
+  "preferredPackageManager": "pnpm",
+  "recommendedAppDir": "app",
+  "stack": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Vitest",
+    "Playwright optional"
+  ]
+}
