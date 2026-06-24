@@ -65,14 +65,3 @@ Current included variant:
 ```
 
 These scripts are intentionally small. Each real project should adapt them to its own package manager, build tools, test commands, and deployment flow.
-
-## Landing site
-
-The marketing/docs landing page lives in `site/` so the workflow boilerplate root stays framework-agnostic.
-
-```bash
-cd site
-pnpm install
-pnpm dev
-pnpm build
-```

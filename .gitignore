@@ -18,5 +18,5 @@ dist/
 build/
 coverage/
 node_modules/
-.astro/
-site/.astro/
+# CocoIndex Code (ccc)
+/.cocoindex_code/

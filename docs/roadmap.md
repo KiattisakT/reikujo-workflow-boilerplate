@@ -49,17 +49,6 @@ Planned:
 - reusable status report template for `lll`
 - retrospective template for `rrr`
 
-## v0.3 — Landing site
-
-Goal: present Reikujo clearly as a workflow system while keeping site dependencies isolated from the root boilerplate.
-
-Planned:
-
-- Astro static landing site in `site/`
-- landing page copy/spec in `docs/landing-page.md`
-- visual QA pass for mobile and desktop
-- deployment note for GitHub Pages or another static host
-
 ## v1 — Stable base template
 
 Goal: the base template is stable enough to use for real projects without rethinking the workflow each time.
