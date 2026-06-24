@@ -97,3 +97,8 @@ docs/i18n-guidelines.md
 ```
 
 Use only the docs that match the project's actual scope. Do not create empty ceremony.
+
+Current Reikujo portable pattern docs:
+
+- `docs/patterns/component-conventions.md`
+- `docs/patterns/hooks-pattern.md`

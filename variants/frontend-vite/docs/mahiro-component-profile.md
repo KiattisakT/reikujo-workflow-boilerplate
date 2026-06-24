@@ -2,6 +2,11 @@
 
 The `frontend-vite` variant uses a Mahiro-style component profile by default.
 
+For portable project-level pattern docs, also read:
+
+- `docs/patterns/component-conventions.md`
+- `docs/patterns/hooks-pattern.md`
+
 ## Defaults
 
 - Package manager: `pnpm`

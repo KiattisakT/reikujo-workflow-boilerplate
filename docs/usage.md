@@ -19,6 +19,8 @@ Then update the project-specific files:
 5. `AGENTS.md` — project-specific instructions and gotchas.
 6. `README.md` — public/user-facing overview.
 
+Optional portable pattern docs live in `docs/patterns/`. Copy only the files that match the generated project's scope.
+
 Useful init variants:
 
 ```bash
@@ -136,3 +138,5 @@ Read:
 - `variants/frontend-vite/AGENTS.addon.md`
 - `variants/frontend-vite/docs/base-components.md`
 - `variants/frontend-vite/docs/mahiro-component-profile.md`
+- `docs/patterns/component-conventions.md`
+- `docs/patterns/hooks-pattern.md`

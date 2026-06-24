@@ -20,6 +20,7 @@ This repo is not a framework starter. It is a working base for how a project sho
 - `docs/roadmap.md` — planned evolution and future variants
 - `docs/mahiro-style.md` — preferred style lens when a repo has not decided locally
 - `docs/mahiro-reference.md` — durable Mahiro-style implementation reference
+- `docs/patterns/` — portable implementation patterns for generated projects
 - `docs/workflow.md` — daily collaboration process
 - `docs/validation.md` — quality gate conventions
 
