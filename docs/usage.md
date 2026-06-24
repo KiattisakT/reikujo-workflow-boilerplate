@@ -135,3 +135,4 @@ Read:
 - `variants/frontend-vite/README.md`
 - `variants/frontend-vite/AGENTS.addon.md`
 - `variants/frontend-vite/docs/base-components.md`
+- `variants/frontend-vite/docs/mahiro-component-profile.md`

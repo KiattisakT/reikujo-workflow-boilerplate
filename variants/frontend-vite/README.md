@@ -51,6 +51,12 @@ src/components/ui/
 src/lib/utils.ts
 ```
 
+Mahiro component profile:
+
+```text
+variants/frontend-vite/docs/mahiro-component-profile.md
+```
+
 If the generated app does not include a command yet, add it before treating the baseline as complete.
 
 ## Mahiro posture for frontend work

@@ -22,6 +22,8 @@ app/src/lib/utils.ts
 
 The scaffold also configures the `@/*` alias so examples can use imports like `@/components/ui/button` and `@/lib/utils`.
 
+For Mahiro-specific component rules, also read `variants/frontend-vite/docs/mahiro-component-profile.md`.
+
 ## Primitive choice
 
 Default to **Radix UI primitives** for this variant.

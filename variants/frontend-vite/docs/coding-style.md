@@ -13,6 +13,7 @@ This variant extends the base Reikujo and Mahiro style docs for React/Vite proje
 - Radix-first primitive choice for new base components unless the project explicitly chooses Base UI.
 - Exact dependency versions in `package.json`; use `pnpm add -E` / `pnpm add -D -E`.
 - shadcn-style source paths: `src/components/ui` and `src/lib/utils.ts` with `@/*` alias.
+- Mahiro-style component profile: see `variants/frontend-vite/docs/mahiro-component-profile.md`.
 
 ## Component ownership
 
@@ -46,6 +47,22 @@ For `components/ui/*` primitives, prefer:
 - domain wrappers above primitives for business behavior
 
 Keep animated/demo primitives like `tubelight-navbar` generic. Move route-specific nav data into app/layout modules.
+
+Use section comments when a component/hook has matching concerns:
+
+```ts
+// _Ref
+// _State
+// _Query
+// _Mutation
+// _Memo
+// _Callback
+// _Form
+// _Event
+// _Effect
+```
+
+Do not add empty markers just to satisfy a template.
 
 Primitive package rule:
 
