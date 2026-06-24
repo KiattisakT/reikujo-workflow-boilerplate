@@ -60,6 +60,7 @@ Current included variant:
 ./scripts/check.sh
 ./scripts/init-project.sh "My Project" --package-manager pnpm
 ./scripts/scaffold-frontend-vite.sh app
+./scripts/copy-frontend-base-components.sh app --install-deps
 ./scripts/handoff.sh
 ```
 

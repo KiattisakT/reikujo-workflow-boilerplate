@@ -11,6 +11,7 @@ From a project created with the Reikujo base:
 ```bash
 ./scripts/init-project.sh "My Frontend App" --variant frontend-vite --package-manager pnpm --git
 ./scripts/scaffold-frontend-vite.sh app
+./scripts/copy-frontend-base-components.sh app --install-deps
 ```
 
 ## Default app directory
@@ -39,6 +40,8 @@ If the generated app does not include a command yet, add it before treating the 
 
 - Preserve product feel during refactors.
 - Follow local primitives and `cn`/class utilities if present.
+- Base primitives follow the source-owned `shadcn-ui/ui` style; do not install shadcn/ui by default.
+- Prefer Radix UI primitives by default; use Base UI only as an explicit project decision.
 - Keep route/page owners thin; move reusable UI to domain components.
 - Keep transport in services and query/mutation wiring in hooks when those owners exist.
 - Use visual checks for UI-heavy work, not build alone.

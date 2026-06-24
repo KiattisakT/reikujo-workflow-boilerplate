@@ -16,6 +16,7 @@ Use it when the project is a frontend app or prototype that should start with:
 ```bash
 ./scripts/init-project.sh "My Frontend App" --variant frontend-vite --package-manager pnpm --git
 ./scripts/scaffold-frontend-vite.sh app
+./scripts/copy-frontend-base-components.sh app --install-deps
 ```
 
 The scaffold script creates the app in `app/` by default. Keep Reikujo workflow docs at the repo root.
@@ -61,3 +62,11 @@ Use Mahiro Style plus project-local product tone:
 - no generic SaaS metric-card walls by default
 - no gradient/pill/motion overload without product reason
 - visual QA for layout-sensitive changes
+
+## Base components
+
+This variant follows the `shadcn-ui/ui` source-owned component pattern without installing shadcn/ui by default.
+
+Default primitive choice: Radix UI. Base UI is an intentional project-level alternative, not the default.
+
+Read `variants/frontend-vite/docs/base-components.md` for the convention and optional copy helper.

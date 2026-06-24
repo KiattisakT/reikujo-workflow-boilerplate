@@ -48,3 +48,4 @@ PY
 
 echo "✓ Created React/Vite app in $APP_DIR"
 echo "Next: cd $APP_DIR && pnpm dev"
+echo "Optional base components: ./scripts/copy-frontend-base-components.sh $APP_DIR --install-deps"

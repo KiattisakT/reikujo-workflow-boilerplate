@@ -119,6 +119,7 @@ Examples:
 ```bash
 ./scripts/init-project.sh "My Frontend App" --variant frontend-vite --package-manager pnpm --git
 ./scripts/scaffold-frontend-vite.sh app
+./scripts/copy-frontend-base-components.sh app --install-deps
 ```
 
 Read:
@@ -126,3 +127,4 @@ Read:
 - `docs/variants/frontend-vite.md`
 - `variants/frontend-vite/README.md`
 - `variants/frontend-vite/AGENTS.addon.md`
+- `variants/frontend-vite/docs/base-components.md`
