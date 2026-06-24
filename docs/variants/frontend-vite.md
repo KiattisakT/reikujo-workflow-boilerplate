@@ -8,6 +8,7 @@ Use it when the project is a frontend app or prototype that should start with:
 - Vite
 - pnpm
 - Tailwind/shadcn-style UI posture, when the project chooses that stack
+- shadcn-style source-owned component paths without running shadcn CLI
 - Vitest for unit/component tests
 - Playwright for visual/e2e checks when UI behavior matters
 
@@ -51,7 +52,21 @@ pnpm test
 pnpm build
 ```
 
+Use exact dependency versions in generated apps:
+
+```bash
+pnpm add -E <package>
+pnpm add -D -E <package>
+```
+
 Add Playwright/e2e checks when layout, routing, auth, or critical flows matter.
+
+The scaffold configures Tailwind CSS and the `@/*` alias so copied primitives can live in:
+
+```text
+app/src/components/ui/
+app/src/lib/utils.ts
+```
 
 ## UI posture
 

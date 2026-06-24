@@ -4,6 +4,8 @@ React/Vite frontend workflow layer for Reikujo.
 
 This variant is intentionally workflow-first. It gives conventions, validation expectations, and scaffold helpers without making every project use the same UI library.
 
+It configures Tailwind CSS, TypeScript, and shadcn-style source-owned component paths without running `shadcn init`.
+
 ## Start
 
 From a project created with the Reikujo base:
@@ -32,6 +34,20 @@ pnpm typecheck
 pnpm lint
 pnpm test
 pnpm build
+```
+
+Install new packages with exact versions:
+
+```bash
+pnpm add -E <package>
+pnpm add -D -E <package>
+```
+
+Default component paths:
+
+```text
+src/components/ui/
+src/lib/utils.ts
 ```
 
 If the generated app does not include a command yet, add it before treating the baseline as complete.

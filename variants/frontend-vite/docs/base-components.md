@@ -13,6 +13,15 @@ The point is the pattern:
 - components include `data-slot` / `data-*` hooks for styling, grouping, and tests
 - domain-specific behavior wraps primitives instead of leaking into primitives
 
+The default generated app uses a shadcn-style structure:
+
+```text
+app/src/components/ui/
+app/src/lib/utils.ts
+```
+
+The scaffold also configures the `@/*` alias so examples can use imports like `@/components/ui/button` and `@/lib/utils`.
+
 ## Primitive choice
 
 Default to **Radix UI primitives** for this variant.
@@ -56,15 +65,19 @@ After a Vite app exists, copy the starter primitives:
 ./scripts/copy-frontend-base-components.sh app --install-deps
 ```
 
-This copies source files into `app/src/` and installs only the small runtime helpers needed by those source files:
+This copies source files into `app/src/` and installs only the runtime helpers needed by those source files:
 
 ```bash
-pnpm add class-variance-authority clsx tailwind-merge @radix-ui/react-slot
+pnpm add -E class-variance-authority clsx tailwind-merge @radix-ui/react-slot framer-motion lucide-react
 ```
 
 It does not install shadcn/ui.
 
 `@radix-ui/react-slot` is used only for the `asChild` composition pattern in the starter `Button`. Add other Radix packages only when the project adds primitives that need them.
+
+`framer-motion` and `lucide-react` are included for the optional `tubelight-navbar` component/demo. If a project does not use that component, it may remove the component and dependencies.
+
+Package installs should use exact versions. The helper writes `.npmrc` with `save-exact=true` and runs `pnpm add -E ...` so generated `package.json` entries do not use `^` or `~` ranges.
 
 ## Base primitive rules
 
@@ -117,6 +130,20 @@ Inputs and labels should stay small and predictable.
 - labels must be explicit for forms
 - invalid state should have stable styling hooks
 - placeholder-only UX is not enough
+
+### Tubelight navbar
+
+The starter includes `components/ui/tubelight-navbar.tsx` as a source-owned animated navigation example inspired by Magic UI-style components.
+
+In Vite/React projects it uses normal `<a>` links. In Next.js projects, replace those with `next/link` if the app uses Next routing.
+
+It requires:
+
+```bash
+pnpm add -E framer-motion lucide-react
+```
+
+Keep this component in `components/ui` only while it remains generic. If it starts carrying product-specific routes, permissions, or copy, wrap it in a domain/layout component instead.
 
 ## Review checklist
 

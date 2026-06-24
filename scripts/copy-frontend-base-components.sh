@@ -48,7 +48,7 @@ if [[ "$INSTALL_DEPS" == "true" ]]; then
     echo "pnpm is required to install dependencies" >&2
     exit 1
   fi
-  (cd "$APP_DIR" && pnpm add class-variance-authority clsx tailwind-merge @radix-ui/react-slot)
+  (cd "$APP_DIR" && printf 'save-exact=true\n' > .npmrc && pnpm add -E class-variance-authority clsx tailwind-merge @radix-ui/react-slot framer-motion lucide-react)
 fi
 
 echo "✓ Copied source-owned base components into $APP_DIR/src"

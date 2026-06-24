@@ -11,6 +11,8 @@ This variant extends the base Reikujo and Mahiro style docs for React/Vite proje
 - `cn`/class composition helper when the project establishes one.
 - Source-owned base primitives modeled after `shadcn-ui/ui`, not installed as a component library.
 - Radix-first primitive choice for new base components unless the project explicitly chooses Base UI.
+- Exact dependency versions in `package.json`; use `pnpm add -E` / `pnpm add -D -E`.
+- shadcn-style source paths: `src/components/ui` and `src/lib/utils.ts` with `@/*` alias.
 
 ## Component ownership
 
@@ -42,6 +44,8 @@ For `components/ui/*` primitives, prefer:
 - `data-slot` and useful `data-*` attributes
 - `asChild` only when polymorphic composition is useful
 - domain wrappers above primitives for business behavior
+
+Keep animated/demo primitives like `tubelight-navbar` generic. Move route-specific nav data into app/layout modules.
 
 Primitive package rule:
 
