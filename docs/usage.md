@@ -27,6 +27,13 @@ Useful init variants:
 ./scripts/init-project.sh "Agent Workspace" --variant agent-workspace --package-manager project-defined
 ```
 
+For frontend variants, package installs should be exact:
+
+```bash
+pnpm add -E <package>
+pnpm add -D -E <package>
+```
+
 ## Use during daily work
 
 ### Explore
@@ -128,3 +135,16 @@ Read:
 - `variants/frontend-vite/README.md`
 - `variants/frontend-vite/AGENTS.addon.md`
 - `variants/frontend-vite/docs/base-components.md`
+
+## Landing site
+
+The landing page is intentionally isolated in `site/`.
+
+```bash
+cd site
+pnpm install
+pnpm dev
+pnpm build
+```
+
+Do not move landing-site dependencies into the boilerplate root.

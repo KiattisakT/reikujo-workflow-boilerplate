@@ -1,0 +1,399 @@
+---
+import '@fontsource-variable/space-grotesk'
+import '@fontsource-variable/geist'
+import '@fontsource-variable/geist-mono'
+import '../styles/global.css'
+
+const workflow = [
+  {
+    step: '01',
+    title: 'Explore',
+    body: 'Read the repo, docs, scripts, and current patterns before touching code.',
+  },
+  {
+    step: '02',
+    title: 'Plan',
+    body: 'Write the smallest plan that names scope, risks, files, and validation.',
+  },
+  {
+    step: '03',
+    title: 'Implement',
+    body: 'Make scoped changes that preserve behavior and respect project ownership.',
+  },
+  {
+    step: '04',
+    title: 'Validate',
+    body: 'Run the real commands. Report pass, fail, and what was not checked.',
+  },
+  {
+    step: '05',
+    title: 'Handoff',
+    body: 'Leave the next session with files touched, decisions, blockers, and next step.',
+  },
+]
+
+const principles = [
+  ['Local rules first', 'AGENTS.md and repeated repo patterns beat generic taste.'],
+  ['Mahiro as fallback', 'Ownership-first structure and restrained UI only when local reality is silent.'],
+  ['Source-owned UI', 'Base components live in your repo, composed from primitives and typed variants.'],
+  ['Exact installs', 'Generated frontend packages use save-exact and pnpm add -E.'],
+]
+
+const bits = [
+  {
+    type: 'docs',
+    title: 'AGENTS.md',
+    body: 'Project-local operating rules for every coding agent entering the repo.',
+    meta: 'repo reality first',
+  },
+  {
+    type: 'script',
+    title: 'init-project.sh',
+    body: 'Project metadata, variant, package manager, and optional git setup in one entry point.',
+    meta: 'safe setup',
+  },
+  {
+    type: 'variant',
+    title: 'frontend-vite',
+    body: 'React/Vite path with validation docs, source-owned UI, and exact dependency policy.',
+    meta: 'first framework lane',
+  },
+  {
+    type: 'template',
+    title: 'handoff.md',
+    body: 'A session bridge that captures changed files, validation, blockers, and next move.',
+    meta: 'context survives',
+  },
+  {
+    type: 'primitive',
+    title: 'Button',
+    body: 'cva variants, typed props, data-slot hooks, and optional Radix Slot composition.',
+    meta: 'source-owned',
+  },
+  {
+    type: 'primitive',
+    title: 'Card',
+    body: 'Composable shell parts that stay generic until a domain wrapper earns ownership.',
+    meta: 'no business rules',
+  },
+]
+
+const commandLines = [
+  'rsync -a --exclude .git --exclude .letta reikujo-workflow-boilerplate/ my-new-project/',
+  'cd my-new-project',
+  './scripts/init-project.sh "My New Project" --variant frontend-vite --package-manager pnpm --git',
+  './scripts/scaffold-frontend-vite.sh app',
+  './scripts/copy-frontend-base-components.sh app --install-deps',
+]
+
+const componentPreviewCode = `import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+
+export const ProjectIntakeCard = () => (
+  <Card>
+    <CardHeader>
+      <CardTitle>Project intake</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <Label htmlFor="project-name">Project name</Label>
+      <Input id="project-name" placeholder="Dream Catcher" />
+      <Button>Start plan</Button>
+    </CardContent>
+  </Card>
+)`
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Reikujo is a workflow boilerplate for agent-assisted projects." />
+    <title>Reikujo Workflow Boilerplate</title>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="atmosphere atmosphere-left" aria-hidden="true"></div>
+    <div class="atmosphere atmosphere-right" aria-hidden="true"></div>
+
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand-lockup" href="#top" aria-label="Reikujo home">
+        <span class="brand-glyph">R</span>
+        <span class="brand-text">Reikujo</span>
+      </a>
+      <div class="nav-list">
+        <a href="#workflow">Workflow</a>
+        <a href="#style">Style</a>
+        <a href="#variant">Variant</a>
+        <a href="https://github.com/KiattisakT/reikujo-workflow-boilerplate">GitHub</a>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="hero hero-magic page-grid">
+        <div class="hero-aurora" aria-hidden="true"></div>
+        <div class="hero-grid-surface" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+
+        <div class="hero-copy reveal">
+          <a class="magic-badge" href="#components">
+            <span class="badge-pulse" aria-hidden="true"></span>
+            <span>frontend-vite now ships source-owned primitives</span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </a>
+          <h1>Workflow infrastructure for projects built with agents.</h1>
+          <p class="lead">
+            Reikujo is a workflow boilerplate for agent-assisted projects. It gives a repo the operating layer that usually gets invented too late: local agent rules, project docs, validation gates, and resumable context.
+          </p>
+          <div class="cta-group">
+            <a class="button button-primary" href="https://github.com/KiattisakT/reikujo-workflow-boilerplate">
+              <span>View repository</span>
+              <span class="button-disc" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M6 14L14 6M14 6H7.8M14 6v6.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </span>
+            </a>
+            <a class="button button-ghost" href="#start">
+              <span>Read start path</span>
+              <span class="button-disc" aria-hidden="true">
+                <svg viewBox="0 0 20 20" fill="none"><path d="M10 4v11M10 15l-4-4M10 15l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-board reveal delay-1">
+          <div class="beam-card frame-large">
+            <span class="beam-line beam-line-a" aria-hidden="true"></span>
+            <span class="beam-line beam-line-b" aria-hidden="true"></span>
+            <div class="core console-panel">
+              <div class="console-head">
+                <span>reikujo.json</span>
+                <span>workflow 0.1</span>
+              </div>
+              <div class="console-matrix">
+                <div>
+                  <span class="matrix-label">variant</span>
+                  <strong>frontend-vite</strong>
+                </div>
+                <div>
+                  <span class="matrix-label">package policy</span>
+                  <strong>exact</strong>
+                </div>
+                <div>
+                  <span class="matrix-label">primitive base</span>
+                  <strong>radix-first</strong>
+                </div>
+              </div>
+              <pre><code>{commandLines.join('\n')}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-grid intro-section" aria-label="What Reikujo gives you">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Not a framework starter</p>
+          <h2>A project operating layer before the stack arrives.</h2>
+        </div>
+        <div class="intro-copy reveal delay-1">
+          <p>
+            Reikujo keeps the base small: docs, scripts, templates, agent rules, and local state conventions. Framework variants can extend it, but the root remains a workflow foundation.
+          </p>
+        </div>
+      </section>
+
+      <section class="workflow-section page-grid" id="workflow">
+        <div class="section-copy reveal">
+          <p class="eyebrow">The loop</p>
+          <h2>Five moves that keep work recoverable.</h2>
+        </div>
+        <div class="workflow-lane">
+          {workflow.map((item, index) => (
+            <article class={`workflow-item reveal delay-${Math.min(index + 1, 4)}`} style={`--index:${index}`}>
+              <span class="workflow-step">{item.step}</span>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="style-section page-grid" id="style">
+        <div class="style-copy reveal">
+          <p class="eyebrow">Mahiro Style</p>
+          <h2>Preference is labeled. Local reality still wins.</h2>
+          <p>
+            The style layer gives agents a review lens for ownership, naming, UI restraint, and extraction. It never turns a preference into current repo truth.
+          </p>
+        </div>
+
+        <div class="principle-grid">
+          {principles.map(([title, body], index) => (
+            <article class={`bezel principle-card reveal delay-${Math.min(index + 1, 4)}`}>
+              <div class="core">
+                <span class="principle-number">{String(index + 1).padStart(2, '0')}</span>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="variant-section page-grid" id="variant">
+        <div class="bezel variant-bezel reveal">
+          <div class="core variant-core">
+            <div>
+              <p class="eyebrow">First framework variant</p>
+              <h2>frontend-vite without generic component drift.</h2>
+              <p>
+                React, Vite, Vitest, source-owned shadcn-style primitives, Radix as the default headless layer, and exact dependency installs.
+              </p>
+            </div>
+            <div class="variant-stack" aria-label="frontend-vite details">
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Vite</span>
+              <span>Vitest</span>
+              <span>Radix-first</span>
+              <span>pnpm add -E</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bits-section page-grid" id="bits">
+        <div class="bits-heading reveal">
+          <p class="eyebrow">Bits catalog</p>
+          <h2>Small pieces that make a project easier to resume.</h2>
+          <p>
+            Reikujo is built from practical workflow bits: docs, scripts, templates, variants, and source-owned primitives. Each piece is meant to be copied, read, edited, and reviewed.
+          </p>
+        </div>
+
+        <div class="bits-rail reveal delay-1" aria-label="Reikujo bits gallery">
+          {bits.map((bit, index) => (
+            <article class="bit-card" style={`--index:${index}`}>
+              <div class="bit-topline">
+                <span>{bit.type}</span>
+                <span>{String(index + 1).padStart(2, '0')}</span>
+              </div>
+              <h3>{bit.title}</h3>
+              <p>{bit.body}</p>
+              <small>{bit.meta}</small>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="component-section page-grid" id="components">
+        <div class="component-copy reveal">
+          <p class="eyebrow">Source-owned components</p>
+          <h2>Base primitives you can read, edit, and wrap.</h2>
+          <p>
+            The frontend variant does not install shadcn/ui as a black box. It copies source-owned primitives into your app so the project can shape variants, tokens, and domain wrappers directly.
+          </p>
+        </div>
+
+        <div class="component-stage reveal delay-1">
+          <div class="bezel component-preview">
+            <div class="core component-preview-core">
+              <div class="preview-card">
+                <div class="preview-card-head">
+                  <div>
+                    <span class="preview-kicker">components/ui/card</span>
+                    <h3>Project intake</h3>
+                  </div>
+                  <span class="preview-state">source</span>
+                </div>
+                <div class="preview-field">
+                  <label for="demo-project">Project name</label>
+                  <input id="demo-project" value="Dream Catcher" readonly />
+                  <small>Explicit label. Helper copy stays close to the field.</small>
+                </div>
+                <div class="preview-actions">
+                  <button class="demo-button demo-primary" type="button">
+                    <span>Start plan</span>
+                    <span aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="M6 10h8M11 7l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+                  </button>
+                  <button class="demo-button demo-secondary" type="button">Open docs</button>
+                </div>
+              </div>
+
+              <div class="primitive-list" aria-label="Base primitives included in frontend-vite">
+                <div>
+                  <span>Button</span>
+                  <small>cva variants, asChild, data-slot</small>
+                </div>
+                <div>
+                  <span>Card</span>
+                  <small>shell parts, no domain rules</small>
+                </div>
+                <div>
+                  <span>Input</span>
+                  <small>focus, invalid, disabled states</small>
+                </div>
+                <div>
+                  <span>Label</span>
+                  <small>explicit form pairing</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="component-code bezel reveal delay-2">
+          <div class="core command-core">
+            <pre><code>{componentPreviewCode}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="start-section page-grid" id="start">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Start path</p>
+          <h2>Copy the workflow. Then choose the variant.</h2>
+        </div>
+        <div class="bezel command-bezel reveal delay-1">
+          <div class="core command-core">
+            <ol>
+              {commandLines.map((line) => <li><code>{line}</code></li>)}
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer page-grid">
+      <span>Reikujo Workflow Boilerplate</span>
+      <a href="https://github.com/KiattisakT/reikujo-workflow-boilerplate">github.com/KiattisakT</a>
+    </footer>
+
+    <script>
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      const targets = document.querySelectorAll('.reveal')
+
+      if (reduceMotion) {
+        for (const target of targets) target.classList.add('is-visible')
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible')
+                observer.unobserve(entry.target)
+              }
+            }
+          },
+          { threshold: 0.18 },
+        )
+
+        for (const target of targets) observer.observe(target)
+      }
+    </script>
+  </body>
+</html>
