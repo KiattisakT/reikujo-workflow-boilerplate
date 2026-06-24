@@ -37,6 +37,12 @@ pnpm test
 pnpm build
 ```
 
+From the Reikujo root, validate the generated variant end-to-end:
+
+```bash
+./scripts/test-frontend-vite-smoke.sh
+```
+
 Install new packages with exact versions:
 
 ```bash

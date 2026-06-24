@@ -8,6 +8,16 @@ Adapt this file after choosing a stack.
 ./scripts/check.sh
 ```
 
+## Variant smoke tests
+
+For the generated React/Vite frontend variant:
+
+```bash
+./scripts/test-frontend-vite-smoke.sh
+```
+
+This creates a temporary Reikujo project, scaffolds `frontend-vite`, copies base components, verifies exact package versions and required generated files, then runs `pnpm typecheck`, `pnpm test -- --run`, and `pnpm build` inside the generated app.
+
 ## Add project-specific checks here
 
 Examples:

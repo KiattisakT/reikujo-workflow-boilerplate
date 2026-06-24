@@ -11,6 +11,16 @@ pnpm test
 pnpm build
 ```
 
+## Smoke test from Reikujo root
+
+When changing the scaffold, templates, or dependency policy, run:
+
+```bash
+./scripts/test-frontend-vite-smoke.sh
+```
+
+The smoke test creates a temporary project, runs the scaffold and component copy helper, checks exact package versions and generated template paths, then runs `pnpm typecheck`, `pnpm test -- --run`, and `pnpm build` in the generated app.
+
 ## Dependency policy
 
 Use exact package versions for app dependencies:
