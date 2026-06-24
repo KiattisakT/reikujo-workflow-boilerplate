@@ -2,6 +2,8 @@
 
 This project follows the Reikujo workflow: repo reality first, plan before implementation, preserve behavior, validate changes, and leave clean handoff notes.
 
+Mahiro Style is included as the preferred fallback lens for code structure, ownership, naming, UI restraint, and review discipline. Use `docs/mahiro-style.md`, but do not let it override stronger repo-local reality.
+
 ## Operating rules
 
 1. Read this file before editing.
@@ -12,6 +14,17 @@ This project follows the Reikujo workflow: repo reality first, plan before imple
 6. Prefer small, reviewable changes over broad rewrites.
 7. Run the relevant validation commands from `docs/validation.md` before claiming completion.
 8. Update docs or handoff notes when the next agent/person would otherwise lose context.
+
+## Style precedence
+
+Use this winner order:
+
+1. `AGENTS.md`
+2. Other repo-local instruction files
+3. Established repo patterns
+4. `docs/mahiro-style.md` fallback
+
+When writing reviews or guidance, separate `Current Reality` from `Preferred Direction`.
 
 ## Workflow shorthand
 
@@ -38,6 +51,9 @@ This project follows the Reikujo workflow: repo reality first, plan before imple
 - `docs/validation.md` — commands and quality gates.
 - `docs/decisions.md` — architectural/product decisions.
 - `docs/handoff.md` — current state and next work.
+- `docs/usage.md` — practical usage guide for new projects.
+- `docs/roadmap.md` — planned evolution and variants.
+- `docs/mahiro-style.md` — Mahiro fallback style, ownership, and review lens.
 
 ## Agent state
 

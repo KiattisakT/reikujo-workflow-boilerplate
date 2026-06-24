@@ -12,19 +12,28 @@ This repo is not a framework starter. It is a working base for how a project sho
 - Local agent state folders under `.agent-state/`
 - Simple scripts for checks, initialization, and handoff notes
 - A default task lifecycle: explore → plan → implement → validate → handoff
+- Mahiro Style guidance for ownership, naming, review, and restrained UI decisions
+
+## Read next
+
+- `docs/usage.md` — how to use this boilerplate in a real project
+- `docs/roadmap.md` — planned evolution and future variants
+- `docs/mahiro-style.md` — preferred style lens when a repo has not decided locally
+- `docs/workflow.md` — daily collaboration process
+- `docs/validation.md` — quality gate conventions
 
 ## Quick start
 
 ```bash
-cp -R reikujo-workflow-boilerplate my-new-project
+rsync -a --exclude .git --exclude .letta reikujo-workflow-boilerplate/ my-new-project/
 cd my-new-project
-./scripts/init-project.sh "My New Project"
+./scripts/init-project.sh "My New Project" --package-manager pnpm --git
 ```
 
 Then fill in:
 
-1. `docs/project-brief.md`
-2. `docs/workflow.md`
+1. `reikujo.json`
+2. `docs/project-brief.md`
 3. `docs/validation.md`
 4. `docs/decisions.md`
 5. `AGENTS.md`
@@ -45,6 +54,7 @@ Later variants can extend it:
 
 ```bash
 ./scripts/check.sh
+./scripts/init-project.sh "My Project" --package-manager pnpm
 ./scripts/handoff.sh
 ```
 

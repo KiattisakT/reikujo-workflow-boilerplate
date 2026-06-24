@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "workflow": {
+    "name": "reikujo",
+    "version": "0.1.0",
+    "variant": "base"
+  },
+  "project": {
+    "name": "reikujo-workflow-boilerplate",
+    "description": "A personal workflow boilerplate for agent-assisted projects.",
+    "preferredPackageManager": "project-defined"
+  },
+  "generatedFrom": {
+    "name": "reikujo-workflow-boilerplate",
+    "version": "0.1.0"
+  }
+}
