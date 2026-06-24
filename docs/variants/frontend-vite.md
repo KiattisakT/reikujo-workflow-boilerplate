@@ -61,7 +61,7 @@ pnpm add -D -E <package>
 
 Add Playwright/e2e checks when layout, routing, auth, or critical flows matter.
 
-The scaffold configures Tailwind CSS and the `@/*` alias so copied primitives can live in:
+The scaffold configures Tailwind CSS, installs `clsx` + `tailwind-merge`, and creates the `cn()` utility behind the `@/*` alias so copied primitives can live in:
 
 ```text
 app/src/components/ui/

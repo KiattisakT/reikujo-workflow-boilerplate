@@ -40,7 +40,7 @@ Prefer product-specific hierarchy, clear actions, and visual checks.
 For `components/ui/*` primitives, prefer:
 
 - `cn()` from `src/lib/utils.ts`
-- `cva()` + `VariantProps` for component-owned variants
+- `tv()` + `VariantProps` from `tailwind-variants` for component-owned variants
 - `data-slot` and useful `data-*` attributes
 - `asChild` only when polymorphic composition is useful
 - domain wrappers above primitives for business behavior

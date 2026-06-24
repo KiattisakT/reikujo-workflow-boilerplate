@@ -30,7 +30,7 @@ Do not leave `^` or `~` version ranges in generated app `package.json` unless th
 
 ## Tailwind and component structure
 
-The frontend-vite scaffold configures Tailwind CSS through the Vite plugin and sets up the `@/*` alias for shadcn-style source-owned components.
+The frontend-vite scaffold configures Tailwind CSS through the Vite plugin, installs `clsx` + `tailwind-merge`, creates `cn()`, and sets up the `@/*` alias for shadcn-style source-owned components.
 
 Expected paths:
 

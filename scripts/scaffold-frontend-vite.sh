@@ -45,6 +45,7 @@ pnpm install
 # Add baseline validation and styling tooling. Keep this source-owned; do not run shadcn init by default.
 pnpm add -D -E vitest jsdom @testing-library/react @testing-library/jest-dom
 pnpm add -D -E tailwindcss @tailwindcss/vite
+pnpm add -E clsx tailwind-merge
 
 python3 - <<'PY'
 from pathlib import Path
@@ -127,6 +128,17 @@ select {
 }
 """)
 
+utils = Path('src/lib/utils.ts')
+utils.parent.mkdir(parents=True, exist_ok=True)
+if not utils.exists():
+    utils.write_text("""import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
+export const cn = (...inputs: ClassValue[]) => {
+  return twMerge(clsx(inputs))
+}
+""")
+
 readme = Path('README.md')
 variant_readme = Path('../variants/frontend-vite/templates/app-readme.md')
 if variant_readme.exists():
@@ -138,5 +150,6 @@ if not smoke_test.exists():
 PY
 
 echo "✓ Created React/Vite app in $APP_DIR"
+echo "✓ Added cn() utility with clsx + tailwind-merge"
 echo "Next: cd $APP_DIR && pnpm dev"
 echo "Optional base components: ./scripts/copy-frontend-base-components.sh $APP_DIR --install-deps"

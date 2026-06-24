@@ -7,7 +7,7 @@ The point is the pattern:
 - components are copied into the app source and owned by the project
 - `components/ui/*` contains small primitives, not business components
 - `cn()` owns class composition with `clsx` + `tailwind-merge`
-- variant classes live beside the component through `class-variance-authority`
+- variant classes live beside the component through `tailwind-variants` (`tv`)
 - components expose typed variants through `VariantProps`
 - polymorphic composition uses `asChild` + Radix `Slot` only where it earns value
 - components include `data-slot` / `data-*` hooks for styling, grouping, and tests
@@ -68,7 +68,7 @@ After a Vite app exists, copy the starter primitives:
 This copies source files into `app/src/` and installs only the runtime helpers needed by those source files:
 
 ```bash
-pnpm add -E class-variance-authority clsx tailwind-merge @radix-ui/react-slot framer-motion lucide-react
+pnpm add -E tailwind-variants clsx tailwind-merge @radix-ui/react-slot framer-motion lucide-react
 ```
 
 It does not install shadcn/ui.

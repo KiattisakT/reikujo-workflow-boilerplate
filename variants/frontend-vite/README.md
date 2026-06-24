@@ -5,6 +5,7 @@ React/Vite frontend workflow layer for Reikujo.
 This variant is intentionally workflow-first. It gives conventions, validation expectations, and scaffold helpers without making every project use the same UI library.
 
 It configures Tailwind CSS, TypeScript, and shadcn-style source-owned component paths without running `shadcn init`.
+It also creates `src/lib/utils.ts` with a `cn()` helper backed by `clsx` and `tailwind-merge`.
 
 ## Start
 
