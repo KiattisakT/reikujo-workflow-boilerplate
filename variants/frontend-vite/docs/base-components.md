@@ -1,6 +1,6 @@
 # Source-Owned Base Components
 
-This variant follows the `shadcn-ui/ui` component-writing style without installing the shadcn CLI or treating shadcn as a runtime component library.
+This variant uses a shadcn-style source layout with a Mahiro-style implementation profile. It does not install the shadcn CLI or treat shadcn as a runtime component library.
 
 The point is the pattern:
 
@@ -13,7 +13,7 @@ The point is the pattern:
 - components include `data-slot` / `data-*` hooks for styling, grouping, and tests
 - domain-specific behavior wraps primitives instead of leaking into primitives
 
-The default generated app uses a shadcn-style structure:
+The default generated app uses a shadcn-style source structure:
 
 ```text
 app/src/components/ui/

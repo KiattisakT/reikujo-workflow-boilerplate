@@ -69,7 +69,7 @@ If the generated app does not include a command yet, add it before treating the 
 
 - Preserve product feel during refactors.
 - Follow local primitives and `cn`/class utilities if present.
-- Base primitives follow the source-owned `shadcn-ui/ui` style; do not install shadcn/ui by default.
+- Base primitives follow a source-owned shadcn-style structure with Mahiro implementation rules such as `tailwind-variants`; do not install shadcn/ui by default.
 - Prefer Radix UI primitives by default; use Base UI only as an explicit project decision.
 - Keep route/page owners thin; move reusable UI to domain components.
 - Keep transport in services and query/mutation wiring in hooks when those owners exist.

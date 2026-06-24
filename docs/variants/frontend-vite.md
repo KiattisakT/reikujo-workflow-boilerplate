@@ -7,8 +7,8 @@ Use it when the project is a frontend app or prototype that should start with:
 - React + TypeScript
 - Vite
 - pnpm
-- Tailwind/shadcn-style UI posture, when the project chooses that stack
-- shadcn-style source-owned component paths without running shadcn CLI
+- Tailwind UI posture with source-owned primitives
+- shadcn-style source paths without running shadcn CLI
 - Vitest for unit/component tests
 - Playwright for visual/e2e checks when UI behavior matters
 
