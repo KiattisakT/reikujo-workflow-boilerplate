@@ -44,6 +44,10 @@ readme = Path('README.md')
 variant_readme = Path('../variants/frontend-vite/templates/app-readme.md')
 if variant_readme.exists():
     readme.write_text(variant_readme.read_text())
+
+smoke_test = Path('src/smoke.test.ts')
+if not smoke_test.exists():
+    smoke_test.write_text("""import { describe, expect, it } from 'vitest'\n\ndescribe('smoke', () => {\n  it('runs the test baseline', () => {\n    expect(true).toBe(true)\n  })\n})\n""")
 PY
 
 echo "✓ Created React/Vite app in $APP_DIR"
