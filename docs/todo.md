@@ -49,8 +49,8 @@ Legend:
 
 ### 3. Strengthen frontend-vite templates
 
-- [ ] Add a service example template only after `services-pattern.md` is written.
-- [ ] Add a query-state/example-loading template only after `query-state-pattern.md` is written.
+- [x] Add a service example template only after `services-pattern.md` is written.
+- [x] Add a query-state/example-loading template only after `query-state-pattern.md` is written.
 - [ ] Add a simple form example that uses `Label`, `Input`, `Button`, and explicit helper/error copy.
 - [ ] Decide whether `tubelight-navbar` should remain in the base copy helper or move to an optional animation pack.
 

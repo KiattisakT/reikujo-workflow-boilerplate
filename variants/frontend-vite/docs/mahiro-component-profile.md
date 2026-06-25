@@ -84,6 +84,8 @@ src/components/ui/button.tsx
 src/components/modules/invoice/delete-invoice-button.tsx
 ```
 
+The starter templates include `src/services/example.ts`, `src/types/example.ts`, and `src/components/modules/example/example-list-state.tsx` to demonstrate service ownership and loading/error/empty/data rendering without forcing a query library into every generated project.
+
 ## Animation and icons
 
 - Use animation libraries only when the component earns motion.

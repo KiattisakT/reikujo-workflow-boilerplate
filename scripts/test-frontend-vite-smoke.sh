@@ -83,8 +83,11 @@ required_paths = [
     'src/components/ui/tubelight-navbar.tsx',
     'src/components/tubelight-navbar-demo.tsx',
     'src/components/modules/example/example-section.tsx',
+    'src/components/modules/example/example-list-state.tsx',
     'src/components/modules/example/index.ts',
     'src/hooks/use-example-toggle.ts',
+    'src/services/example.ts',
+    'src/types/example.ts',
 ]
 for path in required_paths:
     if not Path(path).exists():
