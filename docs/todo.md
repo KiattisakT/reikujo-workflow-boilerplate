@@ -23,6 +23,9 @@ Legend:
 - [x] Add portable component and hook pattern docs.
 - [x] Add `scripts/test-frontend-vite-smoke.sh` end-to-end smoke test.
 - [x] Remove isolated landing site experiment.
+- [x] Add filled frontend-vite docs examples.
+- [x] Add service and query-state templates for frontend-vite.
+- [x] Add adoption guide for using Reikujo in real projects.
 
 ## Next recommended work
 
@@ -65,6 +68,12 @@ Legend:
 - [ ] Update `docs/roadmap.md` so completed frontend-vite/Mahiro work is reflected accurately.
 - [ ] Revisit v0.1/v0.2 statuses after services/query-state docs land.
 - [ ] Decide the next variant only after `frontend-vite` is stable.
+
+### 6. Real adoption dry run
+
+- [ ] Run a temporary adoption test outside this repo.
+- [ ] Review generated app/docs for noise and clarity.
+- [ ] Fix Reikujo based on dry-run findings before using it for an important project.
 
 ## Later / optional
 

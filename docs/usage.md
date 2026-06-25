@@ -2,6 +2,8 @@
 
 Use Reikujo as the first layer of a new project: workflow, docs, agent rules, and handoff structure before framework decisions.
 
+For real project adoption, read `docs/adoption-guide.md` first.
+
 ## Start a new project
 
 ```bash
