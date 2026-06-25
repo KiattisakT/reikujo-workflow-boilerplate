@@ -51,7 +51,7 @@ Do not put business rules into `components/ui`.
 ```text
 app/src/
 ├── components/
-│   ├── ui/                # base primitives: Button, Card, Input, Label
+│   ├── ui/                # base primitives: Button, Card, Input, Label, etc.
 │   ├── modules/           # domain UI: invoice table, booking form, etc.
 │   ├── layouts/           # app shell/layout components
 │   └── sections/          # page sections when useful
@@ -125,13 +125,29 @@ A card primitive should provide shell parts:
 
 Do not create a new shared card type for every product layout. Prefer module-owned cards when the card carries domain meaning.
 
-### Input and Label
+### Badge
+
+A badge primitive should own small status/metadata labels.
+
+- use `tailwind-variants`
+- keep status-to-variant mapping in module/domain code
+- avoid embedding business status copy in the primitive
+
+### Input, Textarea, and Label
 
 Inputs and labels should stay small and predictable.
 
 - labels must be explicit for forms
 - invalid state should have stable styling hooks
 - placeholder-only UX is not enough
+
+### Separator
+
+Separators should be used for visual grouping, not layout spacing. Prefer semantic `role="separator"` only when the separator is meaningful to assistive technology.
+
+### Skeleton
+
+Skeletons should match the shape of the final content and reduce layout shift during loading states.
 
 ### Tubelight navbar
 

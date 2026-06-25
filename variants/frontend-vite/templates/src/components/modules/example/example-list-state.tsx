@@ -1,7 +1,8 @@
 import type { IExampleItem } from '@/types/example'
+import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { cn } from '@/lib/utils'
+import { Skeleton } from '@/components/ui/skeleton'
 
 interface IExampleListStateProps {
   items: IExampleItem[]
@@ -16,6 +17,12 @@ const statusLabels: Record<IExampleItem['status'], string> = {
   done: 'Done',
 }
 
+const statusVariants: Record<IExampleItem['status'], 'default' | 'destructive' | 'muted'> = {
+  ready: 'muted',
+  blocked: 'destructive',
+  done: 'default',
+}
+
 const ExampleListState = ({ items, isLoading, errorMessage, className }: IExampleListStateProps) => {
   if (isLoading) {
     return (
@@ -26,7 +33,7 @@ const ExampleListState = ({ items, isLoading, errorMessage, className }: IExampl
         </CardHeader>
         <CardContent className="grid gap-2">
           {Array.from({ length: 3 }).map((_, index) => (
-            <div key={index} className="h-10 rounded-md bg-muted" />
+            <Skeleton key={index} className="h-10" />
           ))}
         </CardContent>
       </Card>
@@ -72,16 +79,7 @@ const ExampleListState = ({ items, isLoading, errorMessage, className }: IExampl
               className="flex items-center justify-between gap-3 rounded-md border border-border bg-card px-3 py-2"
             >
               <span>{item.title}</span>
-              <span
-                className={cn(
-                  'rounded-full px-2 py-1 text-xs font-medium',
-                  item.status === 'done' && 'bg-primary text-primary-foreground',
-                  item.status === 'ready' && 'bg-muted text-muted-foreground',
-                  item.status === 'blocked' && 'bg-destructive text-destructive-foreground',
-                )}
-              >
-                {statusLabels[item.status]}
-              </span>
+              <Badge variant={statusVariants[item.status]}>{statusLabels[item.status]}</Badge>
             </li>
           ))}
         </ul>

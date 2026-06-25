@@ -25,6 +25,7 @@ Legend:
 - [x] Remove isolated landing site experiment.
 - [x] Add filled frontend-vite docs examples.
 - [x] Add service and query-state templates for frontend-vite.
+- [x] Add minimal extra UI primitives: `Badge`, `Textarea`, `Separator`, and `Skeleton`.
 - [x] Add adoption guide for using Reikujo in real projects.
 
 ## Next recommended work
