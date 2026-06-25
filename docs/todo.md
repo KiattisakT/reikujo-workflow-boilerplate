@@ -45,7 +45,7 @@ Legend:
   - `docs/styling.md`
 - [x] Decide whether `scaffold-frontend-vite.sh` should copy those docs automatically or only document them as optional.
   - Decision: copy them automatically into generated `app/docs/` because they are lightweight and app-local.
-- [ ] Add examples of filled docs for a small frontend project.
+- [x] Add examples of filled docs for a small frontend project.
 
 ### 3. Strengthen frontend-vite templates
 

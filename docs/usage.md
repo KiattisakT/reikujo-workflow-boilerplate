@@ -142,3 +142,10 @@ Read:
 - `docs/patterns/hooks-pattern.md`
 - `docs/patterns/services-pattern.md`
 - `docs/patterns/query-state-pattern.md`
+
+Filled docs example:
+
+- `examples/frontend-vite/docs/project-overview.md`
+- `examples/frontend-vite/docs/development-commands.md`
+- `examples/frontend-vite/docs/file-organization.md`
+- `examples/frontend-vite/docs/styling.md`

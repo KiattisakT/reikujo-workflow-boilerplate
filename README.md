@@ -9,6 +9,7 @@ This repo is not a framework starter. It is a working base for how a project sho
 - Project-local agent rules in `AGENTS.md`
 - Docs-first workflow structure under `docs/`
 - Reusable templates under `templates/`
+- Filled examples under `examples/`
 - Local agent state folders under `.agent-state/`
 - Simple scripts for checks, initialization, and handoff notes
 - A default task lifecycle: explore → plan → implement → validate → handoff
@@ -22,6 +23,7 @@ This repo is not a framework starter. It is a working base for how a project sho
 - `docs/mahiro-style.md` — preferred style lens when a repo has not decided locally
 - `docs/mahiro-reference.md` — durable Mahiro-style implementation reference
 - `docs/patterns/` — portable implementation patterns for generated projects
+- `examples/frontend-vite/docs/` — filled frontend-vite docs example
 - `docs/workflow.md` — daily collaboration process
 - `docs/validation.md` — quality gate conventions
 
