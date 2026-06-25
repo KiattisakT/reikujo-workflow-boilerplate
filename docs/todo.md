@@ -24,6 +24,7 @@ Legend:
 - [x] Add `scripts/test-frontend-vite-smoke.sh` end-to-end smoke test.
 - [x] Remove isolated landing site experiment.
 - [x] Add filled frontend-vite docs examples.
+- [x] Add runnable frontend-vite basic app example.
 - [x] Add service and query-state templates for frontend-vite.
 - [x] Add minimal extra UI primitives: `Badge`, `Textarea`, `Separator`, and `Skeleton`.
 - [x] Add adoption guide for using Reikujo in real projects.
@@ -55,7 +56,7 @@ Legend:
 
 - [x] Add a service example template only after `services-pattern.md` is written.
 - [x] Add a query-state/example-loading template only after `query-state-pattern.md` is written.
-- [ ] Add a simple form example that uses `Label`, `Input`, `Button`, and explicit helper/error copy.
+- [x] Add a simple form example that uses `Label`, `Input`, `Button`, and explicit helper/error copy.
 - [ ] Decide whether `tubelight-navbar` should remain in the base copy helper or move to an optional animation pack.
 
 ### 4. Improve scripts and validation
@@ -100,5 +101,6 @@ For frontend-vite scaffold/template/dependency changes:
 ./scripts/check.sh
 bash -n scripts/*.sh
 ./scripts/test-frontend-vite-smoke.sh
+./scripts/test-frontend-vite-example.sh
 ccc index
 ```

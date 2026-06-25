@@ -151,3 +151,13 @@ Filled docs example:
 - `examples/frontend-vite/docs/development-commands.md`
 - `examples/frontend-vite/docs/file-organization.md`
 - `examples/frontend-vite/docs/styling.md`
+
+Runnable example app:
+
+- `examples/frontend-vite/basic-app/`
+
+Validate it with:
+
+```bash
+./scripts/test-frontend-vite-example.sh
+```

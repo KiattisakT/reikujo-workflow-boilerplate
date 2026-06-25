@@ -18,6 +18,14 @@ For the generated React/Vite frontend variant:
 
 This creates a temporary Reikujo project, scaffolds `frontend-vite`, copies base components, verifies exact package versions and required generated files, then runs `pnpm typecheck`, `pnpm test -- --run`, and `pnpm build` inside the generated app.
 
+For the runnable frontend-vite example app:
+
+```bash
+./scripts/test-frontend-vite-example.sh
+```
+
+This validates `examples/frontend-vite/basic-app` with exact package checks, `pnpm typecheck`, `pnpm test -- --run`, and `pnpm build`.
+
 ## Add project-specific checks here
 
 Examples:

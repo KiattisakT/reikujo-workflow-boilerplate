@@ -65,6 +65,7 @@ Current included variant:
 ```bash
 ./scripts/check.sh
 ./scripts/test-frontend-vite-smoke.sh
+./scripts/test-frontend-vite-example.sh
 ./scripts/init-project.sh "My Project" --package-manager pnpm
 ./scripts/scaffold-frontend-vite.sh app
 ./scripts/copy-frontend-base-components.sh app --install-deps
