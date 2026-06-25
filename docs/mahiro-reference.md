@@ -102,3 +102,5 @@ Current Reikujo portable pattern docs:
 
 - `docs/patterns/component-conventions.md`
 - `docs/patterns/hooks-pattern.md`
+- `docs/patterns/services-pattern.md`
+- `docs/patterns/query-state-pattern.md`

@@ -140,3 +140,5 @@ Read:
 - `variants/frontend-vite/docs/mahiro-component-profile.md`
 - `docs/patterns/component-conventions.md`
 - `docs/patterns/hooks-pattern.md`
+- `docs/patterns/services-pattern.md`
+- `docs/patterns/query-state-pattern.md`

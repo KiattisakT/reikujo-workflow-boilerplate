@@ -17,6 +17,7 @@ This repo is not a framework starter. It is a working base for how a project sho
 ## Read next
 
 - `docs/usage.md` — how to use this boilerplate in a real project
+- `docs/todo.md` — active done/next checklist for the current Reikujo work
 - `docs/roadmap.md` — planned evolution and future variants
 - `docs/mahiro-style.md` — preferred style lens when a repo has not decided locally
 - `docs/mahiro-reference.md` — durable Mahiro-style implementation reference
