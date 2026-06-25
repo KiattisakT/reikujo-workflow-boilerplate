@@ -144,6 +144,15 @@ variant_readme = Path('../variants/frontend-vite/templates/app-readme.md')
 if variant_readme.exists():
     readme.write_text(variant_readme.read_text())
 
+docs_template_dir = Path('../variants/frontend-vite/templates/docs')
+docs_dir = Path('docs')
+if docs_template_dir.exists():
+    docs_dir.mkdir(exist_ok=True)
+    for template in docs_template_dir.glob('*.md'):
+        target = docs_dir / template.name
+        if not target.exists():
+            target.write_text(template.read_text())
+
 smoke_test = Path('src/smoke.test.ts')
 if not smoke_test.exists():
     smoke_test.write_text("""import { describe, expect, it } from 'vitest'\n\ndescribe('smoke', () => {\n  it('runs the test baseline', () => {\n    expect(true).toBe(true)\n  })\n})\n""")

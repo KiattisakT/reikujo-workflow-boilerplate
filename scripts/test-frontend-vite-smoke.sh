@@ -71,6 +71,10 @@ if 'save-exact=true' not in Path('.npmrc').read_text():
     raise SystemExit('.npmrc missing save-exact=true')
 
 required_paths = [
+    'docs/project-overview.md',
+    'docs/development-commands.md',
+    'docs/file-organization.md',
+    'docs/styling.md',
     'src/lib/utils.ts',
     'src/components/ui/button.tsx',
     'src/components/ui/card.tsx',

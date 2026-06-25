@@ -6,6 +6,7 @@ This variant is intentionally workflow-first. It gives conventions, validation e
 
 It configures Tailwind CSS, TypeScript, and shadcn-style source-owned component paths without running `shadcn init`.
 It also creates `src/lib/utils.ts` with a `cn()` helper backed by `clsx` and `tailwind-merge`.
+It copies app-local docs into `app/docs/` for project overview, commands, file organization, and styling.
 
 ## Start
 
@@ -55,6 +56,15 @@ Default component paths:
 ```text
 src/components/ui/
 src/lib/utils.ts
+```
+
+Generated app docs:
+
+```text
+app/docs/project-overview.md
+app/docs/development-commands.md
+app/docs/file-organization.md
+app/docs/styling.md
 ```
 
 Mahiro component profile:

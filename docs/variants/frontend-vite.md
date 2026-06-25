@@ -21,6 +21,7 @@ Use it when the project is a frontend app or prototype that should start with:
 ```
 
 The scaffold script creates the app in `app/` by default. Keep Reikujo workflow docs at the repo root.
+The scaffold also copies frontend-specific docs into `app/docs/` so the generated app has local command, structure, and styling guidance.
 
 ## Ownership shape
 
@@ -66,6 +67,10 @@ The scaffold configures Tailwind CSS, installs `clsx` + `tailwind-merge`, and cr
 ```text
 app/src/components/ui/
 app/src/lib/utils.ts
+app/docs/project-overview.md
+app/docs/development-commands.md
+app/docs/file-organization.md
+app/docs/styling.md
 ```
 
 ## UI posture
